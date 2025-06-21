@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JusRide - Auto Rickshaw Booking Made Easy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="auto-rickshaw-icon-vector-image-260nw-2071670921.png" alt="JusRide Logo">
+                    <span>JusRide</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons" id="authButtons">
+                    <!-- Dynamically populated by JavaScript -->
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="auth/register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section  -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Book Auto Rickshaws in Just a Tap</h1>
+                <p>Affordable, reliable, and convenient auto-rickshaw rides at your fingertips.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="fas fa-download"></i> Download App
+                    </a>
+                    <a href="#" class="btn btn-outline btn-lg">
+                        <i class="fas fa-car"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="smartphone.gif" alt="Auto Rickshaw">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Where would you like to go?</h2>
+                <form id="ride-booking">
+                    <div class="form-group">
+                        <label for="pickup"><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+                        <input type="text" id="pickup" placeholder="Enter pickup location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination"><i class="fas fa-flag"></i> Destination</label>
+                        <input type="text" id="destination" placeholder="Enter destination" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ride-type"><i class="fas fa-rickshaw"></i> Ride Type</label>
+                        <select id="ride-type">
+                            <option value="standard">Standard Auto</option>
+                            <option value="electric">E-Rickshaw</option>
+                            <option value="shared">Shared Auto</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Find Rickshaws</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How JusRide Works</h2>
+            <p class="section-subtitle">Get your auto rickshaw in just 3 easy steps</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <span>1</span>
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Set Your Location</h3>
+                    <p>Enter your pickup and drop locations to see available auto rickshaws near you.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <span>2</span>
+                        <i class="fas fa-rickshaw"></i>
+                    </div>
+                    <h3>Choose Your Ride</h3>
+                    <p>Select from standard auto, e-rickshaw, or shared options with upfront pricing.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <span>3</span>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Pay & Ride</h3>
+                    <p>Pay cash or use our cashless payment options. Enjoy your safe and comfortable ride!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose JusRide</h2>
+            <p class="section-subtitle">We provide the best auto rickshaw service for your daily commute</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates with transparent pricing. No hidden charges or surge pricing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Pickup</h3>
+                    <p>Average pickup time of just 5 minutes in most urban areas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe Rides</h3>
+                    <p>Verified drivers with safety features like SOS button and ride tracking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Electric rickshaw options to reduce your carbon footprint.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Multiple Payments</h3>
+                    <p>Cash, UPI, credit/debit cards, and mobile wallets accepted.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer support available round the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Know your fare before you book</p>
+            
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-rickshaw"></i>
+                        <h3>Standard Auto</h3>
+                    </div>
+                    <div class="price-details">
+                        <div class="price">
+                            <span>₹25</span> / km
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Base fare: ₹30</li>
+                            <li><i class="fas fa-check"></i> Seats: 3 passengers</li>
+                            <li><i class="fas fa-check"></i> Free cancellation</li>
+                            <li><i class="fas fa-check"></i> 24/7 availability</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-card featured">
+                    <div class="price-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>E-Rickshaw</h3>
+                        <div class="popular-badge">Popular</div>
+                    </div>
+                    <div class="price-details">
+                        <div class="price">
+                            <span>₹20</span> / km
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Base fare: ₹25</li>
+                            <li><i class="fas fa-check"></i> Seats: 4 passengers</li>
+                            <li><i class="fas fa-check"></i> Eco-friendly</li>
+                            <li><i class="fas fa-check"></i> Quiet and smooth ride</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Shared Auto</h3>
+                    </div>
+                    <div class="price-details">
+                        <div class="price">
+                            <span>₹15</span> / km
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Base fare: ₹20</li>
+                            <li><i class="fas fa-check"></i> Shared with other passengers</li>
+                            <li><i class="fas fa-check"></i> Fixed routes</li>
+                            <li><i class="fas fa-check"></i> Most economical</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver App Section -->
+    <section class="driver-app">
+        <div class="container">
+            <div class="driver-content">
+                <h2>Are You a Driver?</h2>
+                <p>Join thousands of drivers earning more with JusRide. Get more rides, earn better, and grow your business.</p>
+                <ul class="driver-benefits">
+                    <li><i class="fas fa-check-circle"></i> Higher earnings with lower commissions</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible working hours</li>
+                    <li><i class="fas fa-check-circle"></i> Weekly payments</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 support</li>
+                </ul>
+                <div class="driver-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus"></i> Register as Driver
+                    </a>
+                    <a href="#" class="btn btn-outline btn-lg">
+                        <i class="fas fa-question-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="driver-image">
+                <img src="Untitled.png" alt="Driver App">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Thousands of happy riders and drivers</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"JusRide has made my daily commute so much easier. The fares are reasonable and the drivers are polite. Highly recommended!"</p>
+                    <div class="user">
+                        <img src="images/user1.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Regular Rider</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"As a driver, JusRide has helped me increase my earnings by 40%. The app is easy to use and payments are always on time."</p>
+                    <div class="user">
+                        <img src="images/user2.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>Driver Partner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The electric rickshaw option is fantastic! Comfortable, quiet, and eco-friendly. I use it every day for my office commute."</p>
+                    <div class="user">
+                        <img src="images/user3.jpg" alt="User">
+                        <div class="user-info">
+                            <h4>Ananya Patel</h4>
+                            <span>Eco-Conscious Rider</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download -->
+    <section class="app-download">
+        <div class="container">
+            <div class="app-content">
+                <h2>Download the JusRide App</h2>
+                <p>Book auto rickshaws faster and easier with our mobile app. Available for both iOS and Android.</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-apple"></i>
+                        <div>
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <span>Get it on</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="Screenshot (17).png" alt="App Screens">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>123 Auto Nagar, City Center, Bangalore, Karnataka 560001</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@jusride.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auto-popup Login Modal -->
+    <div class="modal auto-popup" id="autoLoginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="login-card">
+                <div class="login-header">
+                    <img src="Screenshot (17).png" alt="JusRide">
+                    <h2>Welcome Back!</h2>
+                    <p>Login to continue to your account</p>
+                </div>
+                
+                <div class="user-type-toggle">
+                    <button class="active" id="modalRiderBtn">Rider</button>
+                    <button id="modalDriverBtn">Driver</button>
+                </div>
+                
+                <form class="login-form" id="autoLoginForm">
+                    <div class="form-group">
+                        <label for="autoEmail">Email Address</label>
+                        <input type="email" id="autoEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="autoPassword">Password</label>
+                        <input type="password" id="autoPassword" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="remember-forgot">
+                        <div class="remember-me">
+                            <input type="checkbox" id="autoRemember">
+                            <label for="autoRemember">Remember me</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="auth/forgot-password.html">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    
+                    <div class="social-login">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-google"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-apple"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="register-link">
+                        Don't have an account? <a href="auth/register.html">Register now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- On-click Login Overlay -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-card-container">
+            <div class="login-card">
+                <span class="close-modal">&times;</span>
+                <div class="login-header">
+                    <img src="images/logo.png" alt="JusRide">
+                    <h2>Welcome Back!</h2>
+                    <p>Login to continue to your account</p>
+                </div>
+                
+                <div class="user-type-toggle">
+                    <button class="active" id="overlayRiderBtn">Rider</button>
+                    <button id="overlayDriverBtn">Driver</button>
+                </div>
+                
+                <form class="login-form" id="overlayLoginForm">
+                    <div class="form-group">
+                        <label for="overlayEmail">Email Address</label>
+                        <input type="email" id="overlayEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="overlayPassword">Password</label>
+                        <input type="password" id="overlayPassword" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="remember-forgot">
+                        <div class="remember-me">
+                            <input type="checkbox" id="overlayRemember">
+                            <label for="overlayRemember">Remember me</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="auth/forgot-password.html">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    
+                    <div class="social-login">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-google"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-apple"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="register-link">
+                        Don't have an account? <a href="auth/register.html">Register now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="Screenshot (17).png" alt="JusRide Logo">
+                        <span>JusRide</span>
+                    </div>
+                    <p>Making auto rickshaw rides convenient, affordable and reliable for everyone.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on offers and promotions.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JusRide. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-cc-amazon-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+    <!-- Include the main.js file we created earlier -->
+</body>
+</html>
