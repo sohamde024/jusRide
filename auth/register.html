@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | JusRide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <style>
+        body{
+            background-color: #FF6B6B;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header matching home page -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/index.html" class="logo">
+                    <img src="/images/auto-rickshaw-icon-vector-image-260nw-2071670921.png" alt="JusRide Logo">
+                    <span>JusRide</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Registration Section -->
+    <main class="auth-container">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join thousands of riders and drivers</p>
+                </div>
+
+                <div class="user-type-toggle">
+                    <button class="active" id="riderBtn">Rider</button>
+                    <button id="driverBtn">Driver</button>
+                </div>
+
+                <form class="auth-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Create a password" required>
+                        <small class="hint">Minimum 8 characters with at least 1 number</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="/assets/terms.html">Terms of Service</a> and <a href="/assets/privacy.html">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    
+                    <div class="auth-footer">
+                        Already have an account? <a href="/auth/login.html">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer matching home page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/assets/terms.html">Terms</a>
+                <a href="/assets/privacy.html">Privacy</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2023 JusRide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        // Toggle between rider/driver
+        const riderBtn = document.getElementById('riderBtn');
+        const driverBtn = document.getElementById('driverBtn');
+        
+        riderBtn.addEventListener('click', () => {
+            riderBtn.classList.add('active');
+            driverBtn.classList.remove('active');
+        });
+        
+        driverBtn.addEventListener('click', () => {
+            driverBtn.classList.add('active');
+            riderBtn.classList.remove('active');
+        });
+
+        // Form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your registration logic here
+            console.log('Form submitted');
+            // Redirect after successful registration
+            window.location.href = '/index.html'; 
+        });
+    </script>
+</body>
+</html>

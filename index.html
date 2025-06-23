@@ -6,9 +6,10 @@
     <title>JusRide - Auto Rickshaw Booking Made Easy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="loginStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <link rel="stylesheet" href="/css/auth.css">
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -16,7 +17,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="auto-rickshaw-icon-vector-image-260nw-2071670921.png" alt="JusRide Logo">
+                    <img src="/images/auto-rickshaw-icon-vector-image-260nw-2071670921.png" alt="JusRide Logo">
                     <span>JusRide</span>
                 </a>
                 <ul class="nav-links">
@@ -28,8 +29,8 @@
                 </ul>
                 <div class="auth-buttons" id="authButtons">
                     <!-- Dynamically populated by JavaScript -->
-                    <a href="login.html" class="btn btn-outline">Login</a>
-                    <a href="auth/register.html" class="btn btn-primary">Sign Up</a>
+                    <a href="/auth/login.html" class="btn btn-outline">Login</a>
+                    <a href="/auth/register.html" class="btn btn-primary" id="register-btn">Sign Up</a>
                 </div>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -49,12 +50,12 @@
                         <i class="fas fa-download"></i> Download App
                     </a>
                     <a href="#" class="btn btn-outline btn-lg">
-                        <i class="fas fa-car"></i> Book Now
+                        <i class="fas fa-bell"></i> Book Now
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="smartphone.gif" alt="Auto Rickshaw">
+                <img src="/images/smartphone.gif" alt="Auto Rickshaw">
             </div>
         </div>
     </section>
@@ -106,7 +107,7 @@
                 <div class="step">
                     <div class="step-icon">
                         <span>2</span>
-                        <i class="fas fa-rickshaw"></i>
+                        <img src="/images/16526595.png" alt="">
                     </div>
                     <h3>Choose Your Ride</h3>
                     <p>Select from standard auto, e-rickshaw, or shared options with upfront pricing.</p>
@@ -269,7 +270,7 @@
                 </div>
             </div>
             <div class="driver-image">
-                <img src="Untitled.png" alt="Driver App">
+                <img src="/images/Untitled.png" alt="Driver App">
             </div>
         </div>
     </section>
@@ -362,7 +363,7 @@
                 </div>
             </div>
             <div class="app-image">
-                <img src="Screenshot (17).png" alt="App Screens">
+                <img src="/images/Screenshot (17).png" alt="App Screens">
             </div>
         </div>
     </section>
@@ -424,7 +425,7 @@
             <span class="close-modal">&times;</span>
             <div class="login-card">
                 <div class="login-header">
-                    <img src="Screenshot (17).png" alt="JusRide">
+                    <img src="/images/Screenshot (17).png" alt="JusRide">
                     <h2>Welcome Back!</h2>
                     <p>Login to continue to your account</p>
                 </div>
@@ -467,7 +468,7 @@
                     </div>
                     
                     <div class="register-link">
-                        Don't have an account? <a href="auth/register.html">Register now</a>
+                        Don't have an account? <a href="#">Register now</a>
                     </div>
                 </form>
             </div>
@@ -475,12 +476,12 @@
     </div>
 
     <!-- On-click Login Overlay -->
-    <div class="login-overlay" id="loginOverlay">
+    <div class="login-overlay" id="loginOverlay" style="overflow-y: scroll;">
         <div class="login-card-container">
             <div class="login-card">
                 <span class="close-modal">&times;</span>
                 <div class="login-header">
-                    <img src="images/logo.png" alt="JusRide">
+                    <img src="/images/Screenshot (17).png" alt="JusRide">
                     <h2>Welcome Back!</h2>
                     <p>Login to continue to your account</p>
                 </div>
@@ -523,19 +524,21 @@
                     </div>
                     
                     <div class="register-link">
-                        Don't have an account? <a href="auth/register.html">Register now</a>
+                        Don't have an account? <a href="/auth/register.html">Register now</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    
+
 <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
-                        <img src="Screenshot (17).png" alt="JusRide Logo">
+                        <img src="/images/Screenshot (17).png" alt="JusRide Logo">
                         <span>JusRide</span>
                     </div>
                     <p>Making auto rickshaw rides convenient, affordable and reliable for everyone.</p>
@@ -574,7 +577,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 JusRide. All rights reserved.</p>
+                <p>&copy; 2025 JusRide. All rights reserved.</p>
                 <div class="payment-methods">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-mastercard"></i>
@@ -587,7 +590,7 @@
     </footer>
 
 
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
     <!-- Include the main.js file we created earlier -->
 </body>
 </html>

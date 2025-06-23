@@ -1,0 +1,112 @@
+/* Auth Page Styles */
+.auth-container {
+    padding: 4rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.auth-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: #666;
+}
+
+/* Form Styles */
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.auth-form input:focus {
+    border-color: #FF6B6B;
+    outline: none;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* User Type Toggle */
+.user-type-toggle {
+    display: flex;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.user-type-toggle button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.user-type-toggle button.active {
+    background: #FF6B6B;
+    color: white;
+}
+
+/* Terms Checkbox */
+.terms {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.terms input {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Footer Links */
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #4a6bff;
+    text-decoration: none;
+}
