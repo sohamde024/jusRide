@@ -110,3 +110,55 @@
     color: #4a6bff;
     text-decoration: none;
 }
+
+/* Forgot Password Specific Styles */
+.forgot-password-options {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.forgot-password-options p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.alternate-option {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4a6bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.toast-error {
+    background: #ff4a4a;
+}
+
+.toast-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.toast-content {
+    font-size: 0.9rem;
+}

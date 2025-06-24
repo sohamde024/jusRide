@@ -237,11 +237,27 @@
             margin-bottom: 8px;
             color: var(--gray-color);
         }
+
+         /* Transparent Curtain Header Styles */
+        #header-curtain {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgb(255, 255, 255, 0.98);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <!-- Header (same as main site but without auth buttons) -->
-    <header class="header">
+    <header class="header" id="header-curtain">
         <div class="container">
             <nav class="navbar">
                 <a href="../index.html" class="logo">
@@ -327,6 +343,17 @@
         </div>
     </section>
 
+     <!-- Footer matching main site -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/assets/terms.html">Terms</a>
+                <a href="/assets/privacy.html">Privacy</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 JusRide. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="/js/main.js"></script>
     <script>
         // Login Page Specific JavaScript
@@ -381,6 +408,17 @@
             loginForm.action = '/api/rider/login';
         });
         
+        // Auto-show header when scrolling to top
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('#header-curtain');
+            if (window.pageYOffset < 50) {
+                header.style.top = '0';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                header.style.top = '-80px';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            }
+        });
     </script>
 </body>
 </html>

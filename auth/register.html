@@ -12,11 +12,26 @@
         body{
             background-color: #FF6B6B;
         }
+         /* Transparent Curtain Header Styles */
+        #header-curtain {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgb(255, 255, 255, 0.98);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <!-- Header matching home page -->
-    <header class="header">
+    <header class="header" id="header-curtain">
         <div class="container">
             <nav class="navbar">
                 <a href="/index.html" class="logo">
@@ -101,7 +116,7 @@
                 <a href="/assets/privacy.html">Privacy</a>
                 <a href="#contact">Contact</a>
             </div>
-            <p>&copy; 2023 JusRide. All rights reserved.</p>
+            <p>&copy; 2025 JusRide. All rights reserved.</p>
         </div>
     </footer>
 
@@ -128,6 +143,17 @@
             console.log('Form submitted');
             // Redirect after successful registration
             window.location.href = '/index.html'; 
+        });
+        // Auto-show header when scrolling to top
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('#header-curtain');
+            if (window.pageYOffset < 50) {
+                header.style.top = '0';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                header.style.top = '-80px';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            }
         });
     </script>
 </body>

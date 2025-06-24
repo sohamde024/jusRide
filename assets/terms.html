@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | JusRide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/legal.css">
+    <style>
+        /* Curtain Header Styles */
+        .header-curtain {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgb(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            /* border-bottom: 1px solid rgba(0,0,0,0.1); */
+        }
+        
+        /* Header reveal trigger area */
+        .header-reveal-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            z-index: 999;
+        }
+        
+        .header-reveal-area:hover + .header-curtain,
+        .header-curtain:hover {
+             top: 0;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+            /* box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) */
+        }
+        
+        .legal-container {
+            padding-top: 40px; /* Reduced space since header is hidden by default */
+        }
+        
+        /* Make sure content isn't hidden behind header */
+        @media (max-width: 768px) {
+            .header-curtain {
+                top: -60px;
+                height: 60px;
+            }
+            
+            .header-reveal-area {
+                height: 15px;
+            }
+            
+            .legal-container {
+                padding-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <!-- Curtain Header -->
+     <!-- Header Reveal Trigger Area -->
+    <div class="header-reveal-area"></div>
+    
+    <!-- Curtain Header -->
+    <header class="header-curtain">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/index.html" class="logo">
+                    <img src="/images/auto-rickshaw-icon-vector-image-260nw-2071670921.png" alt="JusRide Logo">
+                    <span>JusRide</span>
+                </a>
+                <div class="auth-buttons">
+                    <a href="/auth/login.html" class="btn btn-outline">Login</a>
+                    <a href="/auth/register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Terms Content -->
+    <main class="legal-container">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Terms of Service</h1>
+                <p class="last-updated">Last Updated: <span id="current-date"></span></p>
+            </div>
+            
+            <div class="legal-content">
+                <section class="legal-section">
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing or using the JusRide platform, you agree to be bound by these Terms of Service and our Privacy Policy. If you disagree with any part of the terms, you may not access the service.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>2. Description of Service</h2>
+                    <p>JusRide provides an online platform that connects passengers with auto-rickshaw drivers. Our services include ride booking, fare calculation, and payment processing.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>3. User Responsibilities</h2>
+                    <ol class="legal-list">
+                        <li>You must be at least 18 years old to use our services</li>
+                        <li>You agree to provide accurate and complete information</li>
+                        <li>You are responsible for maintaining the confidentiality of your account</li>
+                        <li>You agree to use the service only for lawful purposes</li>
+                    </ol>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>4. Payments and Fees</h2>
+                    <p>JusRide charges a service fee for each completed ride. All fares are calculated based on distance and time, and are displayed before you confirm your ride.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>5. Cancellation Policy</h2>
+                    <p>Cancellations made more than 5 minutes after booking may be subject to a cancellation fee. Repeated cancellations may result in temporary suspension of your account.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>6. Intellectual Property</h2>
+                    <p>All content included on the JusRide platform, including text, graphics, logos, and software, is the property of JusRide or its content suppliers and protected by copyright laws.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>7. Limitation of Liability</h2>
+                    <p>JusRide shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use the service.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>8. Changes to Terms</h2>
+                    <p>We reserve the right to modify these terms at any time. We will notify users of significant changes through the app or via email.</p>
+                </section>
+                
+                <section class="legal-section">
+                    <h2>9. Governing Law</h2>
+                    <p>These terms shall be governed by and construed in accordance with the laws of the jurisdiction where JusRide is headquartered.</p>
+                </section>
+                
+                <div class="legal-contact">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> legal@jusride.com</p>
+                        <p><i class="fas fa-phone"></i> +91 XXXX XXX XXX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kolkata, West Bengal, India</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/assets/terms.html">Terms</a>
+                <a href="/assets/privacy.html">Privacy</a>
+                <a href="/index.html#contact">Contact</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> JusRide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date and year
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Optional: Auto-show header when scrolling to top
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-curtain');
+            if (window.pageYOffset < 50) {
+                header.style.top = '0';
+            } else {
+                header.style.top = '-80px';
+            }
+        });
+    </script>
+</body>
+</html>
